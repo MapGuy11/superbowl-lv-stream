@@ -22,9 +22,10 @@
       levelSelectorConfig: {
     title: 'Quality',
     labels: {
-        2: 'High', // 500kbps
-        1: 'Med', // 240kbps
-        0: 'Low', // 120kbps
+        3: '1080p FHD', // 5370kbps
+        2: '720p HD', // 2721kbps
+        1: '360p SD', // 960kbps
+        0: '270p LQ', // 461kbps
     },
     labelCallback: function(playbackLevel, customLabel) {
         return customLabel + playbackLevel.level.height+'p'; // High 720p
