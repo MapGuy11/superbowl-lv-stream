@@ -18,8 +18,18 @@
       parentId: '#player-wrapper',
       plugins: [
         LevelSelector,
-        DashShakaPlayback,
-      ],
+        DashShakaPlayback],
+      levelSelectorConfig: {
+    title: 'Quality',
+    labels: {
+        2: 'High', // 500kbps
+        1: 'Med', // 240kbps
+        0: 'Low', // 120kbps
+    },
+    labelCallback: function(playbackLevel, customLabel) {
+        return customLabel + playbackLevel.level.height+'p'; // High 720p
+    }
+  },
       width: 640,
       height: 360,
       hideMediaControl: false,
